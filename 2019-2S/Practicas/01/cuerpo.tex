@@ -1,0 +1,46 @@
+% Para iniciar una sección debe escribirse
+%\section{Nombre de la sección}
+% Lo anterior inmediatamente creará la sección y la numerará.
+
+\section*{Objetivos}
+\subsection*{Generales}
+\begin{itemize}
+    \item Introducir a los alumnos a la práctica de ensamblado de circuitos digitales
+\end{itemize}
+
+\subsection*{Específicos}
+\begin{itemize}
+    \item Demostrar la necesidad de mantener un estado estable de entrada (pull-up/pull-down)
+    \item Acondicionar los circuitos para mantener un voltaje de operación óptimo
+    \item Mostrar las operaciones lógicas básicas en funcionamiento en un circuito implementado físicamente
+    \item Contrastar los diseños teóricos con los resultados experimentales de los circuitos implementados físicamente
+\end{itemize}
+
+\section{Introducción}
+\subsection{Niveles lógicos}
+Cuando se trabaja con lógica digital la representación de un estado se hace utilizando lógica binaria, la cuál requiere
+de dos estados claramente definidos: $1$ y $0$.
+
+A nivel físico, dichos estados pueden a su vez representarse con distintos tipos de magnitudes medibles, tales como 
+un voltaje constante, una corriente, una temperatura, o un valor de luminosidad.
+
+Asimismo, tal y como se ha explicado en clase, dependiendo de la tecnología utilizada (TTL, CMOS, LVCMOS, etc) los niveles
+lógicos se representan con un nivel de voltaje que obedece a los siguientes umbrales:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Estado} & \textbf{CMOS} & \textbf{TTL}  \\ \hline
+        \textbf{0}      & 0.0 V - 1.5 V & 0.0 V - 0.8 V \\ \hline
+        \textbf{1}      & 3.5 V - 5.0 V & 2.0 V - 5.0 V \\ \hline
+    \end{tabular}
+    \caption{Umbrales de voltaje para niveles lógicos}
+    \label{table:umbralesLogicos}
+\end{table}
+
+
+
+
+
+\section{Desarrollo Experimental}
