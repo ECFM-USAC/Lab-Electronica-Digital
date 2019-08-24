@@ -192,9 +192,9 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
     \item 4x resistencias de 1 k$\ohm$
     \item 4x LED de cualquier color (excepto infrarrojo o ultravioleta)
     \item 6x metros de alambre para protoboard calibre 22. Compren al menos 2 colores para los 6 metros. \textbf{No usen \emph{UTP}}, aunque eso les quieran vender.
-    \item 1x 74xx08
-    \item 1x 74xx04
-    \item 1x 74xx32
+    \item 2x 74xx08 (AND)
+    \item 2x 74xx04 (NOT)
+    \item 2x 74xx32 (OR)
 \end{itemize}
 
 
@@ -209,4 +209,42 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
 \end{itemize}
 
 \subsection{Procedimiento}
-Aquí los ejercicios a resolver
+\subsubsection{Fuente de alimentación}
+Pregunte a su instructor cómo construir una fuente con los insumos que tiene disponibles.
+
+\subsubsection{Primer circuito con Electrónica Digital}
+Implementar un circuito simple para demostrar uno de los \emph{Teoremas de De Morgan} utilizando las compuertas disponibles.
+Solamente utilice dos entradas con los dip-switch para hacer la demostración.
+Utilice un LED como salida de cada operación, limitando su corriente con una resistencia de 1k$\ohm$.
+
+Debe realizar dos operaciones. Por ejemplo, si se decide demostrar el teorema de la Ecuación \ref{Eq:DeMorgan1}.
+
+\begin{equation}
+    \overline{A B} = \bar{A} + \bar{B}
+    \label{Eq:DeMorgan1}
+\end{equation}
+
+Se debe implementar el circuito $\overline{A B}$ y por aparte también deberá ensamblar el circuito $\bar{A} + \bar{B}$, utilizando las mismas dos entradas en paralelo.
+Cada circuito deberá tener una salida independiente visible con un LED.
+
+\subsubsection{Función booleana y reducción con Karnaugh}
+De los integrantes de su grupo, busque la persona con el número carnet más bajo: tome los últimos 4 dígitos (no repetidos) de este número.
+
+\vspace{14pt}
+
+Por ejemplo, si el carnet es \textbf{200815521} los últimos 4 dígitos no repetidos son: \textbf{1}, \textbf{2}, \textbf{5} y \textbf{8}.
+
+\vspace{14pt}
+
+Ahora construya una función booleana utilizando la sumatoria de los dígitos obtenidos. Tomando el ejemplo anterior, sería:
+
+$$ f = \sum{1,2,5,8} $$
+
+Codifique los dígitos en BCD y asigne el bit menos significativo a el dip-switch localizado físicamente más a la derecha en el protoboard 
+(pregunte a su instructor si quedan dudas).
+
+\vspace{14pt}
+
+Finalmente, reduzca la función utilizando un Mapa de Karnaugh para simplificar los mintérminos obtenidos e implemente el circuito, usando como entrada 
+el dip-switch con resistencias \emph{pull-down} y la salida con un LED con limitación de corriente.
+
