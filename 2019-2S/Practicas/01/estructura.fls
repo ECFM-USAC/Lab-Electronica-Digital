@@ -281,8 +281,14 @@ INPUT c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
 OUTPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.pdf
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
+OUTPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/estructura.out
 INPUT c:/texlive/2019/texmf-dist/tex/latex/apacite/spanish.apc
 INPUT c:/texlive/2019/texmf-dist/tex/latex/apacite/spanish.apc
 INPUT c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/01/images/logoecfm.png

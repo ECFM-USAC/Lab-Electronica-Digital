@@ -26,7 +26,7 @@ A nivel físico, dichos estados pueden a su vez representarse con distintos tipo
 un voltaje constante, una corriente, una temperatura, o un valor de luminosidad.
 
 Asimismo, tal y como se ha explicado en clase, dependiendo de la tecnología utilizada (TTL, CMOS, LVCMOS, etc) los niveles
-lógicos se representan con un nivel de voltaje que obedece a los siguientes umbrales:
+lógicos se representan con un nivel de voltaje que obedece a los umbrales de la Tabla \ref{Table:umbralesLogicos}:
 
 \begin{table}[H]
     \centering
@@ -37,7 +37,7 @@ lógicos se representan con un nivel de voltaje que obedece a los siguientes umb
         \textbf{1}      & 3.5 V - 5.0 V & 2.0 V - 5.0 V \\ \hline
     \end{tabular}
     \caption{Umbrales de voltaje para niveles lógicos}
-    \label{table:umbralesLogicos}
+    \label{Table:umbralesLogicos}
 \end{table}
 
 \subsection{Implementación experimental de circuitos de lógica digital}
@@ -54,7 +54,7 @@ y tienen un costo relativamente bajo. Es por estas razones que son la metodolog�
 los estudiantes al esta nueva área de conocimiento.
 
 Normalmente los circuitos integrados poseen más de una compuerta lógica en cada empaquetado, lo que permite optimizar la cantidad de
-componentes que requiere un diseño final. En la figura \ref{Fig:CompuertasEnCI} se muestra el diagrama de un Circuito Integrado de
+componentes que requiere un diseño final. En la Figura \ref{Fig:CompuertasEnCI} se muestra el diagrama de un Circuito Integrado de
 Compuertas NOT: la alimentación al circuito integrado es vital para que funcione (pines \textit{Vcc} y \textit{GND})
 
 \begin{figure}[H]
@@ -64,7 +64,8 @@ Compuertas NOT: la alimentación al circuito integrado es vital para que funcion
     \label{Fig:CompuertasEnCI}
 \end{figure}
 
-Los circuitos integrados tienen un código único base que indica la funcionalidad que realizan. A continuación se muestran algunos ejemplos\footnote{Listado completos de códigos:
+Los circuitos integrados tienen un código único base que indica la funcionalidad que realizan. A continuación se muestran algunos ejemplos
+\footnote{Listado completo de códigos:
 \url{https://en.wikibooks.org/wiki/Digital_Circuits/7400_Series}}:
 
 \begin{itemize}
@@ -104,7 +105,7 @@ cualquiera de los dos estados lógicos posibles. Las \textbf{entradas} a los CI 
 Por esta razón, cuando la entrada de un circuito integrado no está siendo manejada por la salida de otro circuito integrado es necesario cuidar que los niveles de voltaje estén siempre dentro de los umbrales.
 
 Si es un usuario que interactúa con dichas entradas a través de pulsadores o interruptores, cuando éstos se encuentran \emph{abiertos} (desconectados), el voltaje en la entrada cambia a un valor incierto (ni 1, ni 0)
-de forma aleatoria. En la figura \ref{Fig:NoPull} se muestran los casos posibles de este problema.
+de forma aleatoria. En la Figura \ref{Fig:NoPull} se muestran los casos posibles de este problema.
 
 \begin{figure}[H]
     \centering
@@ -118,7 +119,7 @@ de forma aleatoria. En la figura \ref{Fig:NoPull} se muestran los casos posibles
 Para mitigar el problema de entradas inciertas se colocan resistencias que mantendrán un nivel de voltaje, ya sea en alto (resistencias \emph{pull-up}) o en bajo (resistencias \emph{pull-down}) mientras el pulsador
 o interruptor se encuentra desconectado. Cuando el usuario activa el interruptor, la resistencia \emph{pull-up} o \emph{pull-down} tiene una impedancia muy alta comparado con la resistencia interna del mismo interruptor, por lo
 que la resistencia equivalente combinada del circuito de entrada es prácticamente la resistencia interna del interruptor (tiende a ser 0). Esto permite cambiar de estados (entre 1 y 0) rápidamente sin permanecer por mucho
-tiempo fuera de cualquier umbral que cause un estado indeseado a la salida. En las figuras \ref{Fig:PullDown} y \ref{Fig:PullUp} se muestra el diagrama para la correcta conexión en los circuitos de entrada.
+tiempo fuera de cualquier umbral que cause un estado indeseado a la salida. En las Figuras \ref{Fig:PullDown} y \ref{Fig:PullUp} se muestra el diagrama para la correcta conexión en los circuitos de entrada.
 
 \begin{figure}[H]
     \centering
@@ -163,6 +164,8 @@ Para lograr esto hay varias alternativas que pueden tomarse:
     \item Una fuente de computadora de escritorio que ya no esté en uso
 \end{itemize}
 
+\vspace{20pt}
+
 Un regulador lineal puede ser cualquiera de los siguientes circuitos integrados:
 \begin{itemize}
     \item MAX603
@@ -205,4 +208,5 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
     \item 1x Multímetro digital para medir voltaje
 \end{itemize}
 
-\subsection{}
+\subsection{Procedimiento}
+Aquí los ejercicios a resolver
