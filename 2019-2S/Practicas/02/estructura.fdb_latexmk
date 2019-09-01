@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1567324614 "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.tex" "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf" "estructura" 1567324617
-  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.aux" 1567324616 4809 81868277f9a28336aeb1be1f09d6d81d ""
+["pdflatex"] 1567381142 "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.tex" "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf" "estructura" 1567381204
+  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.aux" 1567381145 5069 bc538fd6e40ceaf187eb7cf58938b3a3 ""
   "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.tex" 1567320171 2649 1cedae5bf530bd6560db8d374cc44f8e ""
   "c:/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1565232842 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1565232052 1004 54797486969f23fa377b128694d548df ""
@@ -200,9 +200,9 @@
   "c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1565234824 3265705 1c47a36e1854fca80ccfb74d1dfbdde3 ""
   "c:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1565234932 4254415 ba552ba2abc26886a02b77ceb84e3377 ""
   "c:/texlive/2019/texmf.cnf" 1565234804 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "cuerpo.tex" 1567324611 14971 629707ae8b779aee6a4782396d630424 ""
-  "estructura.aux" 1567324616 4809 81868277f9a28336aeb1be1f09d6d81d "pdflatex"
-  "estructura.out" 1567324616 1120 856d42d6c37a138dd26b701e532a3b72 "pdflatex"
+  "cuerpo.tex" 1567381203 16090 4f88b102d0eef6b4d84bfba96910eca3 ""
+  "estructura.aux" 1567381145 5069 bc538fd6e40ceaf187eb7cf58938b3a3 "pdflatex"
+  "estructura.out" 1567381145 1258 0a3bd570826387e5bd90a5eb7012f8de "pdflatex"
   "estructura.tex" 1567320171 2649 1cedae5bf530bd6560db8d374cc44f8e ""
   "images/74LS47.JPG" 1567322178 51517 ad119abe29591b6eff9cd984bed1ca56 ""
   "images/7SegmentDisplay.jpg" 1567318079 61246 b6cdab2fd475d844d3d7a627b830f528 ""
@@ -213,8 +213,8 @@
   "images/logoecfm.png" 1565254622 133520 71b47352181b24207eb78b61adcb12a4 ""
   (generated)
   "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.log"
-  "estructura.aux"
   "estructura.pdf"
-  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf"
+  "estructura.aux"
   "estructura.out"
   "estructura.log"
+  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf"

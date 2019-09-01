@@ -5,13 +5,13 @@
 \section*{Objetivos}
 \subsection*{Generales}
 \begin{itemize}
-    \item Realizar una interfaz básica humano-máquina (HMI) utilizando dispositivos de entrada y salida a un circuito de electrónica digital
+    \item Realizar una interfaz básica humano-máquina (HMI) con un circuito digital utilizando dispositivos de entrada y salida simples
 \end{itemize}
 
 \subsection*{Específicos}
 \begin{itemize}
     \item Diseñar múltiples circuitos combinacionales para obtener un resultado único en conjunto
-    \item Implementar un circuito de lógica combinacional utilizando compuertas lógicas básicas para la decodificación de BCD a formato de Display de 7 segmentos
+    \item Implementar un circuito de lógica combinacional utilizando compuertas lógicas básicas y un circuito de propósito específico para la decodificación de BCD a formato de Display de 7 segmentos
     \item Contrastar los diseños teóricos con los resultados experimentales de los circuitos implementados físicamente
 \end{itemize}
 
@@ -22,7 +22,7 @@ Es un método de interacción entre un dispositivo (normalmente computadora o ma
 tanto para enviar comandos, como para recibir retroalimentación de parte de la máquina con la que se trabaja. Las interfaces se realizan a través de dispositivos de entrada y dispositivos de salida.
 
 En esta práctica los elementos de entrada son lo más los pulsadores o el \emph{dip-switch} y los elementos de salida de la interfaz son los LEDs y el display de 7 segmentos.
-Estos elementos son los más básicos que pueden utilizarse en un circuito digital para interactuar naturalmente un usuario humano.
+Estos elementos son los más básicos que pueden utilizarse en un circuito digital para interactuar naturalmente un usuario humano sin necesidad de un entrenamiento especial.
 
 \subsection{Display de 7 segmentos}
 La probabilidad de que un usuario promedio sea capaz de decodificar en tiempo real la información desplegada en 4 LEDs en BCD 
@@ -98,7 +98,7 @@ En la Figura \ref{Fig:CommonAnode} se muestra el funcionamiento interno de un di
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{images/CommonAnode.jpg}
-    \caption{Display de 7 segmentos de cátodo común}
+    \caption{Display de 7 segmentos de ánodo común}
     \label{Fig:CommonAnode}
 \end{figure}
 
@@ -116,18 +116,18 @@ de representación en distintas bases (el \textbf{*} indica cualquier símbolo v
 \subsection{Decodificador BCD a 7 segmentos - 74LS47}
 Este circuito integrado de uso específico cumple con una tarea única: obtener de una entrada codificada en BCD de 4 bits
 (valores entre 0x00 y 0x0F) y convertirlos a la representación de segmentos (A - G) de un display de 7 segmentos. Específicamente
-el modelo 74LS47 está diseñado para manejar displays de ánodo común. Este integrado también integra algunos pines extra de entrada para
-realizar pruebas de funcionamiento del display, los cuales no serán utilizados en esta práctica. En la Figura \ref{Fig:74LS47} se muestra
+el modelo 74LS47 está diseñado para manejar displays de ánodo común. Este integrado también incluye algunos pines extra de entrada para
+realizar pruebas de funcionamiento del display (\emph{LAMP TEST}, \emph{BI/RB0}, \emph{RBI}), los cuales no serán utilizados en esta práctica. En la Figura \ref{Fig:74LS47} se muestra
 un diagrama de conexión para este dispositivo. La hoja de datos completa puede descargarse de la siguiente dirección:
 
 \begin{center}
-    \url{https://www.jameco.com/Jameco/Products/ProdDS/50420.pdf}    
+    \url{http://www.sycelectronica.com.ar/semiconductores/74LS47.pdf}    
 \end{center}
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{images/74LS47.JPG}
+    \includegraphics[scale=0.8]{images/74LS47.JPG}
     \caption{Diagrama de conexión de 74LS47}
     \label{Fig:74LS47}
 \end{figure}
@@ -174,7 +174,7 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
 Utilice la misma fuente de alimentación que en la Práctica \#1.
 
 \subsubsection{Codificador de índice}
-Se pretende a diseñar un circuito de lógica digital que permita codificar la información de año de ingreso a la USAC de alguno de los
+Se requiere a diseñar un circuito de lógica digital que permita codificar la información de año de ingreso a la USAC de alguno de los
 integrantes del grupo a un valor que exprese un índice correspondiente a cada dígito. Debido a que la cantidad de dígitos
 que conforman este número es 4, se puede realizar la codificación de entrada BCD utilizando 3 bits.
 
@@ -187,7 +187,7 @@ muestra en la Tabla \ref{Table:ejemploIndices}.
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        \textbf{Dígitos} & 2 & 0 & 1 & 8 \\ \hline
+        \textbf{Dígito} & 2 & 0 & 1 & 8 \\ \hline
         \textbf{Índice}  & 1 & 2 & 3 & 4 \\ \hline
     \end{tabular}
     \caption{Ejemplo de asignación de índice a cada dígito}
@@ -204,13 +204,13 @@ Las salidas deben ser la representación en BCD de cada dígito, asignado al ín
 
 \vspace{14 pt}
 
-El método de entrada es a través del dip-switch (no olivde las resistencias \emph{pull-down})de 3 posiciones, en el que el usuairo
+El método de entrada es a través del dip-switch (no olivde las resistencias \emph{pull-down}) de 3 posiciones, en el que el usuairo
 selecciona un valor de índice (de 1 a 4) y la salida es el dígito correspondiente al índice,
 la cuál se despliega a través de 4 LEDs (siempre con sus resistencias limitadoras de corriente).
 
 \subsubsection*{Importante}
 \begin{itemize}
-    \item Si el usuario selecciona un índice inválido (0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) la salida del circuito debe ser siempre $1111_2$
+    \item Si el usuario selecciona un índice inválido (0, 5, 6, 7) la salida del circuito debe ser siempre $1111_2$
     \item Tome en cuenta que la salida debe ser de 4 bits, ya que un dígito puede tener un valor entre 0 y 9.
     \item Cada grupo de trabajo puede seleccionar un número a codificar, no necesariamente puede ser un año. El único requisito es que tenga al menos 4 dígitos.
 \end{itemize}
@@ -241,10 +241,25 @@ dígito mostrado.
     \label{Fig:Currentlimitingresistors}
 \end{figure}
 
+\pagebreak
 
-\subsection{Resultado esperado}
+\section{Resultados esperados}
+\subsection{Funcionamiento completo}
 Se requiere que al interconectar todos los circuitos el usuario interactúe con la entrada del \emph{dip-switch} y así seleccione el índice del dígito del año, mientras
 este número se muestra directamente en el display de 7 segmentos.
+
+\subsection{Optimización de recursos}
+Recuerde que a pesar de obtener funciones separadas para las salidas de los Mapas de Karnaugh, es posible reutilizar operaciones entre los circuitos de salida.
+Por ejemplo, piense en el siguiente caso hipotético en el que las funciones de salida de los Mapas de K. quedaran así:
+$$ x = \bar A B \bar C + \bar A \bar C + \bar A$$
+$$ y = AB\bar C + \bar C + B $$
+$$ z = AB + \bar A \bar C + \bar A $$
+$$ w = ABC + A\bar B \bar C + B $$
+
+En la función $x$ aparecen varias veces $\bar A$ y $\bar C$, por lo que solamente es necesario utilizar una compuerta lógica para negar cada variable de entrada. Asimismo,
+la variable negada $\bar A$ de la función $x$ puede reutilizarse en el circuito de la función $z$, donde aparece de nuevo. Incluso, el mintérmino completo de $x$ $(\bar A \bar C)$
+se repite también en $z$, por lo que se posible reutilizar la salida de esa operación completa de $x$ directamente en $z$. 
+
 
 \section{Conclusiones}
 El funcionamiento del selector de índice es muy utilizado en electrónica digital y sirve para trasladar o codificar información única
