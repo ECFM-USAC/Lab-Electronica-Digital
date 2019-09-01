@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Interfaz humano-m\341quina \(HMI\)}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Display de 7 segmentos}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{M\351todos de activaci\363n de display}{subsection.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.3}{Representaci\363n num\351rica de bases distintas de 10}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.4}{Decodificador BCD a 7 segmentos - 74LS47}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Desarrollo Experimental}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Materiales y Equipo}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Procedimiento}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Fuente de alimentaci\363n}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Codificador de \355ndice}{subsection.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.3}{Interfaz de salida}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Resistencias de c\341todos}{subsection.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Resultado esperado}{section.2}% 14
+\BOOKMARK [1][-]{section.3}{Conclusiones}{}% 15
