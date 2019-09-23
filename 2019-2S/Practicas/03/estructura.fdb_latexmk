@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1569260276 "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.tex" "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.pdf" "estructura" 1569260279
-  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.aux" 1569260279 3103 6c47ea266fddd3a0bb5386e92860006c ""
+["pdflatex"] 1569279838 "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.tex" "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.pdf" "estructura" 1569279842
+  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.aux" 1569279841 2488 b26f2c00e890dd825b49dc06cac309ab ""
   "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.tex" 1568824495 2639 918c56568abef9c7dcc0e4656a9e6d20 ""
   "c:/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1568052133 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1568051220 1004 54797486969f23fa377b128694d548df ""
@@ -208,16 +208,15 @@
   "c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1568054369 3123860 443f180d06913feabc678ef5d4711d12 ""
   "c:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1568054456 1910026 61513835a1fc5ea54e4304b9363019b6 ""
   "c:/texlive/2019/texmf.cnf" 1568054349 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "cuerpo.tex" 1569260275 9949 794c4ea49ac47909c193f73c3b790b22 ""
-  "estructura.aux" 1569260279 3103 6c47ea266fddd3a0bb5386e92860006c "pdflatex"
-  "estructura.out" 1569260279 878 df9505e470b18e8d5c5f0c00c72634e7 "pdflatex"
+  "cuerpo.tex" 1569279830 6529 7d7a234347201d1db430a7f04c74902b ""
+  "estructura.aux" 1569279841 2488 b26f2c00e890dd825b49dc06cac309ab "pdflatex"
+  "estructura.out" 1569279841 852 6f3736cb7110ed7f6f91386f2e49a7f0 "pdflatex"
   "estructura.tex" 1568824495 2639 918c56568abef9c7dcc0e4656a9e6d20 ""
-  "images/DisplayResistors.png" 1567445060 5771 65e90d8012307131e93e118b07e618f9 ""
   "images/logoecfm.png" 1567445060 133520 71b47352181b24207eb78b61adcb12a4 ""
   (generated)
-  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.log"
-  "estructura.pdf"
-  "estructura.out"
-  "estructura.aux"
   "estructura.log"
+  "estructura.pdf"
+  "estructura.aux"
+  "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.log"
+  "estructura.out"
   "c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/03/estructura.pdf"

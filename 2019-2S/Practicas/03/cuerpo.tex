@@ -82,104 +82,37 @@ operación en un display de 7 segmentos. Las operaciones a realizar son:
 
 \vspace{14pt}
 
+
+\subsection{Interfaz de usuario}
 El método de entrada son 2 variables de 3 bits ($A_0, A_1, A_2, B_0, B_1, B_2$) a través de \emph{dip-switch} o pulsadores. Además, debe existir
 un interruptor dedicado para seleccionar si la operación a realizar es \emph{suma} o \emph{resta sin signo}.
-Debido a que el CI 74LS47 despliega caracteres no alfanuméricos con para valores entre 0x0A y 0x0F, no será necesario hacer ninguna corrección para
-mostrar el valor adecuado.
-
-
-
-
-
-
-\vspace{14pt}
-
-Por ejemplo: si el año de ingreso fuese \emph{2018}, se le asignaría un índice (posición) a cada dígito como se
-muestra en la Tabla \ref{Table:ejemploIndices}.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \textbf{Dígito} & 2 & 0 & 1 & 8 \\ \hline
-        \textbf{Índice}  & 1 & 2 & 3 & 4 \\ \hline
-    \end{tabular}
-    \caption{Ejemplo de asignación de índice a cada dígito}
-    \label{Table:ejemploIndices}
-\end{table}
-
-
-En otras palabras, el \textbf{índice 2} corresponde al \textbf{dígito 0}; al \textbf{índice 3} le corresponde el \textbf{dígito 1} y de la misma forma para el resto...
-
-\vspace{14 pt}
-
-El objetivo de esta sección será diseñar y construir un circuito que codifique cada uno de los índices (del 1 al 4) al dígito correspondiente en el año a mostrar.
-Las salidas deben ser la representación en BCD de cada dígito, asignado al índice de cada entrada.
-
-\vspace{14 pt}
-
-El método de entrada es a través del dip-switch (no olivde las resistencias \emph{pull-down}) de 3 posiciones, en el que el usuairo
-selecciona un valor de índice (de 1 a 4) y la salida es el dígito correspondiente al índice,
-la cuál se despliega a través de 4 LEDs (siempre con sus resistencias limitadoras de corriente).
-
-\subsubsection*{Importante}
-\begin{itemize}
-    \item Si el usuario selecciona un índice inválido (0, 5, 6, 7) la salida del circuito debe ser siempre $1111_2$
-    \item Tome en cuenta que la salida debe ser de 4 bits, ya que un dígito puede tener un valor entre 0 y 9.
-    \item Cada grupo de trabajo puede seleccionar un número a codificar, no necesariamente puede ser un año. El único requisito es que tenga al menos 4 dígitos.
-\end{itemize}
-
-\subsection{Interfaz de salida}
-En esta sección convertirán la información BCD en un número humanamente amigable: el display de 7 segmentos es la forma más sencilla de lograr
-el elemento de salida de la interfaz humano-máquina. Se utilizará un circuito integrado decodificación de BCD a Display para esta tarea.
-
-Por primera vez se le dejará como tarea interpretar una hoja de datos de fabricante, en este caso, para comprender el funcionamiento detallado y
-conexionado del 74LS47. Cualquier duda consúltela a su instructor. Consejo: no se enfoque en el diagrama lógico que aparece en la hoja de datos,
-utilice mejor la tabla de verdad y las descripciones de cada pin. Las primeras 2 páginas de la hoja de datos contienen toda la información necesaria
-para realizar la práctica.
-
-\subsubsection*{Importante}
-Recuerde que al trabajar con un display de ánodo común, la activación de un elemento se hace através de un \textbf{0 lógico}. No olvide esto
-al estar analizando la tabla de verdad en la hoja de datos del integrado.
-
-\subsubsection{Resistencias de cátodos}
-Para limitar la corriente que circula en cada uno de los LED que conforman el display es necesario colocar una resistencia individual en cada cátodo.
-La forma más simple de hacerlo es colocar una resistencia de $ 220 \ohm \leq R \leq 1 k\ohm$ de por medio entre cada salida de segmento del 74LS47 (A, B, ..., F, G)
-y cada pin de entrada del display (cada cátodo). Ver Figura \ref{Fig:Currentlimitingresistors}. Por favor, no utilice una resistencia única en el ánodo, ya que esto causa brillo variable entre cada 
-dígito mostrado.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=1.0]{images/DisplayResistors.png}
-    \caption{Resistencias limitadoras de corriente}
-    \label{Fig:Currentlimitingresistors}
-\end{figure}
-
-\pagebreak
+Debido a que el CI 74LS47 despliega caracteres no alfanuméricos con para valores entre 0x0A y 0x0F, esto se tomará en consideración y 
+no será necesario hacer ninguna corrección para mostrar el valor adecuado en el rango de 0x0A - 0x0F.
 
 \section{Resultados esperados}
 \subsection{Funcionamiento completo}
-Se requiere que al interconectar todos los circuitos el usuario interactúe con la entrada del \emph{dip-switch} y así seleccione el índice del dígito del año, mientras
-este número se muestra directamente en el display de 7 segmentos.
+Utilice la simplificación de \emph{full adders} para la realización de la práctica (implementados con compuertas), no realice las reducciones a través de Mapas de Karnaugh (o si lo desea, puede
+morir en el intento).
 
-\subsection{Optimización de recursos}
-Recuerde que a pesar de obtener funciones separadas para las salidas de los Mapas de Karnaugh, es posible reutilizar operaciones entre los circuitos de salida.
-Por ejemplo, piense en el siguiente caso hipotético en el que las funciones de salida de los Mapas de K. quedaran así:
-$$ x = \bar A B \bar C + \bar A \bar C + \bar A$$
-$$ y = AB\bar C + \bar C + B $$
-$$ z = AB + \bar A \bar C + \bar A $$
-$$ w = ABC + A\bar B \bar C + B $$
+\pagebreak
 
-En la función $x$ aparecen varias veces $\bar A$ y $\bar C$, por lo que solamente es necesario utilizar una compuerta lógica para negar cada variable de entrada. Asimismo,
-la variable negada $\bar A$ de la función $x$ puede reutilizarse en el circuito de la función $z$, donde aparece de nuevo. Incluso, el mintérmino completo de $x$ $(\bar A \bar C)$
-se repite también en $z$, por lo que se posible reutilizar la salida de esa operación completa de $x$ directamente en $z$. 
+\section{Bonus}
+Como tendrán tiempo extra para realizar el diseño de la práctica (debido a la semana de Congreso Estudiantil), esta sección se coloca como un \emph{reto extra} 
+que \textbf{no es obligatorio} hacer. Sin embargo, esta sección puede exonerarlos de una parte (o de todo) el segundo parcial si el funcionamiento es correcto
+y cumple con todos los requisitos solicitados. Todo debe entregarse en el reporte y funcionando físicamente en protoboard el \textbf{lunes 07/10/2019}.
 
-
-\section{Conclusiones}
-El funcionamiento del selector de índice es muy utilizado en electrónica digital y sirve para trasladar o codificar información única
-en base a un índice o número que indica qué operación realizar. Esta operación es parte fundamental del funcionamiento de un microprocesador,
-incluso de la tecnología actual.
-
+\subsection{Multiplicador decimal} \label{sec:Multiplicador}
+\emph{Equivalente al 40\% del Segundo Examen Parcial}
 \vspace{14pt}
 
-En realidad, lo que se acaba de construir es conocido como un \textbf{Multiplexor} (coloquialmente MUX).
+Utilizando \textbf{dos display de 7 segmentos} desplegar el producto de dos variables de 3 bits (cada una). Puede utilizar
+únicamente compuertas lógicas (AND, OR, NOT, XOR, NAND, XNOR) y 2 driver de display de 7 segmentos (74LS47). El resultado debe mostrarse en \emph{base 10}
+sin utilizar los caracteres hexacecimales (0x0A, 0x0B, 0x0C, 0x0D, 0x0F).
+
+\subsection{Divisor decimal entero}
+\emph{Equivalente al 60\% del Segundo Examen Parcial}
+\vspace{14pt}
+
+Para que esta sección tenga validez, el multiplicador (sección \ref{sec:Multiplicador}) debió haber sido implementado a cabalidad. El divisor decimal debe incluir 
+una entrada de 4 bits para el dividendo y 2 bits para el divisor. El diseño debe incluir únicamente compuertas lógicas (AND, OR, NOT, XOR, NAND, XNOR) y
+2 driver de display de 7 segmentos (74LS47). El resultado debe mostrarse en \emph{base 10} sin utilizar los caracteres hexadecimales (0x0A, 0x0B, 0x0C, 0x0D, 0x0F).
