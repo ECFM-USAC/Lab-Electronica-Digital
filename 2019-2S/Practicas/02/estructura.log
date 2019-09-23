@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.8.7)  1 SEP 2019 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.9.9)  23 SEP 2019 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -931,19 +931,19 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `estructura.out' has not changed.
-(rerunfilecheck)             Checksum: 0A3BD570826387E5BD90A5EB7012F8DE;1258.
+(rerunfilecheck)             Checksum: 98619A359AC0CECF0420E84F96C3D03D;1274.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 39140 strings out of 492623
- 815929 string characters out of 6133306
- 979028 words of memory out of 5000000
- 42534 multiletter control sequences out of 15000+600000
+ 39140 strings out of 494403
+ 815929 string characters out of 6172298
+ 974714 words of memory out of 5000000
+ 42314 multiletter control sequences out of 15000+600000
  540226 words of font info for 53 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 62 hyphenation exceptions out of 8191
  55i,9n,70p,505b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf (9 pages, 495621 bytes).
+Output written on c:/Users/Ivan/Documents/GitHub/Lab-Electronica-Digital/2019-2S/Practicas/02/estructura.pdf (9 pages, 495724 bytes).
 PDF statistics:
  197 PDF objects out of 1000 (max. 8388607)
  166 compressed objects within 2 object streams
