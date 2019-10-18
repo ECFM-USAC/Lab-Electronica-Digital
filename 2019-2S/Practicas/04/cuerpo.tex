@@ -33,7 +33,7 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
 
 \subsubsection*{Materiales}
 \begin{itemize}
-    \item 2x pulsadores
+    \item 3x pulsadores
     \item 1x interruptor SPST (o un pulsador que mantenga su último estado)
     \item 1x fuente de alimentación (ver apartado anterior con todas las alternativas)
     \item 2x capacitores electrolíticos de 47 $\mu$F 16V
@@ -43,9 +43,13 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
     \item 2x LEDs rojos
     \item 2x LEDs amarillos
     \item 6x Resistencias $220 \ohm \leq R \leq 1 k\ohm$
-    \item 6x metros de alambre para protoboard calibre 22. Compren al menos 2 colores para los 6 metros. \textbf{No usen \emph{UTP}}, aunque eso les quieran vender.
-    \item Flip-flops de acuerdo a su diseño 
+    \item 2x Resistencias para temporización de reloj
+    \item 1x Capacitor para temporización de reloj
+    \item 1x Capacitor $10nF \leq C \leq 100nF$
+    \item 1x circuito integrado temporizador 555
+    \item Flip-flops de acuerdo a su diseño (se recomienda 74LS175 si en su diseño utiliza FFs tipo D)
     \item Las compuertas lógicas a utilizar dependen del diseño final de cada grupo (AND, OR, NOT, XOR, NAND, XNOR)
+    \item 6x metros de alambre para protoboard calibre 22. Compren al menos 2 colores para los 6 metros. \textbf{No usen \emph{UTP}}, aunque eso les quieran vender.
 \end{itemize}
 
 
@@ -62,6 +66,11 @@ de parte del laboratorio de instrumentación. El laboratorio de instrumentación
 \subsection{Procedimiento}
 \subsubsection{Fuente de alimentación}
 Utilice la misma fuente de alimentación que en la Práctica \#1.
+
+\subsection{Reloj del sistema}
+Diseñe un reloj de frecuencia constante y ciclo de trabajo cercano al 50\% para controlar la lógica combinacional del proyecto. Utilice un temporizador 555 haciendo uso de las 
+ecuaciones de diseño en modo astable. Tome en cuenta que para el diseño del semáforo cada ciclo de reloj puede significar un cambio de estado, por lo que el período de cada pulso
+de reloj debe rondar la \emph{escala humana} (más de 5 segundos, por ejemplo).
 
 \subsubsection{Semáforos en intersección}
 Se debe diseñar la lógica necesaria para manejar 2 semáforos: el primero ubicado en una avenida (vía principal) y el segundo ubicado en la calle que atraviesa la avenida.
@@ -90,3 +99,9 @@ interfaz de entrada se simularán las siguientes condiciones:
     \item Sensor de presencia de automovil en calle o avenida: pulsador
     \item Corte de energía eléctrica: interruptor 
 \end{itemize}  
+
+\subsection{Bonus}
+Debido a la frecuencia baja del reloj del sistema, el usuario debe mantener presionado el push-button que simula a cualquiera de los sensores hasta el siguiente ciclo de reloj.
+Para evitar esto, es posible diseñar un circuito basado en 555 que cuando se detecte una pulsación, este genere una salida única en alto de tiempo constante que se asegura se
+mantena activa durante al menos (y no más de) 1 ciclo de reloj. En todo caso, debería implementarse un circuito \textbf{Monostable} con 555 para cada pulsador. Como compensación
+se retribuirían 10 pts del segundo examen parcial.
