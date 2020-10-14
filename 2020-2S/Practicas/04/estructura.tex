@@ -1,0 +1,72 @@
+\documentclass[10pt, letterpaper]{article} % El tamaño de letra se cambia acá (podrían poner [10pt], por ejemplo)
+
+\usepackage[letterpaper, portrait, margin=1cm]{geometry}
+
+\usepackage[main=spanish, english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{fullpage}
+\usepackage{euscript}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[amssymb]{SIunits}
+\usepackage[pdftex]{graphicx}
+\usepackage[colorlinks=false, linkcolor=blue, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
+\usepackage{graphics}
+\usepackage{subcaption}
+\usepackage{eurosym} 
+\usepackage[version=3]{mhchem} 
+\usepackage{enumerate}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{babel,arrows,automata}
+\usepackage{listings} 
+\usepackage[americanvoltages]{circuitikz}
+%paquetes para utilizar normas apa
+\usepackage{apacite}
+\usepackage{tabularx}
+
+
+\RequirePackage{apacite}
+
+% Título del documento. Cámbienlo dependiendo del propósito del documento
+\title{Escuela de Ciencias Físicas y Matemáticas}
+\makeatletter
+\let\thetitle\@title
+\makeatother
+
+%Acá definen características del encabezado. Pueden jugar cambiando números y viendo el efecto sobre el encabezado.
+\newcommand{\hoofding}[5]{ %El [5] quiere decir que se escribirán 5 ítems
+\begin{flushleft}
+\includegraphics[height=2.8cm]{images/logoecfm.png} %[height=] define el tamaño (altura en este caso) de la imagen [Logo.jpeg]
+\end{flushleft}
+\vspace{-3cm} % Relacionado con la distancia entre el logo y la línea
+\hspace{4cm} 
+\parbox{15cm}{ #1\\#2\\#3\\#4\\#5} % Cada # indica en qué ítem irá qué información
+{\parindent=0pt \hrulefill} 
+\vspace{1mm}}
+
+% Invocar figura
+%\newcommand{\figuur}[2]{\includegraphics[width=#1]{#2}} 
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% Aquí inician su documento
+\begin{document}
+\setlength{\parindent}{1cm}%sangría
+%\renewcommand{\BOthers}[1]{et al.\hbox{}}%esto cambia para multiples autores de "Cols" a "et al." respetando lo propuesto por normas apa.
+%\renewcommand{\BRetrievedFrom}{Recuperado de }%esto cambia la palabra "Descargado de" a "Recuperado de" respetando lo propuesto por normas apa.
+
+% En esta parte indican los ítems del encabezado (por ejemplo #1 era Curso, #2 era código... y así)
+\hoofding {\thetitle}{Laboratorio de Electrónica Digital (F604)}{Practica $\#$4}
+{\textit{Semáforos de intersección}}{Ing. Iván René Morales}%se substituye por sus nombres
+
+% Acá incluyen el cuerpo de su documento, que está en el archivo Cuerpo.tex
+\input{cuerpo.tex}
+%ingreso de la bibliografía
+%\bibliographystyle{apacite}
+%\bibliography{biblio.bib}
+
+\end{document} 
+
+
